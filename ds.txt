@@ -1,0 +1,16 @@
+generics
+{"setToken":"thisistoken","setUserInfo":{firstName: "Mohammad",
+          lastName: "Rezaei",
+          imageSrc:
+            "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector.png",}}
+
+ActionName[ActionName.setUserInfo]
+
+
+enum ActionName {
+    setUserInfo,
+    setToken,
+  }
+
+  ActionName.setUserInfo -> 0
+  ActionName[ActionName.setUserInfo] -> "setUserInfo"
