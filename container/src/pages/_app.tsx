@@ -1,12 +1,13 @@
 import {store} from "@/core/infrastructure/datastore/redux";
 import '@/index.css';
 import { Provider } from "react-redux";
-import type { AppProps } from "next/app";
+import type { AppContext, AppProps } from "next/app";
 import { Suspense, lazy } from "react";
+import App from "next/app";
 const Sidebar = lazy(() => import("app2/sideBar"));
 const Header = lazy(() => import("app1/header"));
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Suspense fallback={"loading remote"}>
@@ -22,4 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
     </Provider>
   );
+}
+async function getInitialProps(ctx: AppContext) {
+  const appProps = await App.getInitialProps(ctx);
+  return appProps;
 }

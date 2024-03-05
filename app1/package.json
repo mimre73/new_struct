@@ -10,7 +10,9 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@module-federation/nextjs-mf": "^8.1.7",
+    "@module-federation/utilities": "^3.0.5",
     "@reduxjs/toolkit": "^2.1.0",
+    "feather-route-matcher": "^4.0.0",
     "formik": "^2.4.5",
     "inversify": "^6.0.2",
     "lodash": "^4.17.21",

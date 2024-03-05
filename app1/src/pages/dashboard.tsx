@@ -3,10 +3,10 @@ import Head from "next/head";
 import React from "react";
 
 type Props = {
-  name: String
+  name: String;
 };
 
-function Dashboard({name}: Props) {
+function Dashboard({ name }: Props) {
   return (
     <>
       <Head>
@@ -23,9 +23,9 @@ function Dashboard({name}: Props) {
     </>
   );
 }
-export async function getServerSideProps() {
+Dashboard.getServerSideProps = async () => {
   return {
-      props: {name:'mohammad'}
+    props: { name: "mohammad" },
   };
-}
+};
 export default Dashboard;

@@ -2,11 +2,7 @@ import UserPageContent from "@/core/presentation/components/pages/UsetPageConten
 import Head from "next/head";
 import React from "react";
 
-type Props = {
-  name: String
-};
-
-function Users({name}: Props) {
+function Users() {
   return (
     <>
       <Head>
